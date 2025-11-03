@@ -17,10 +17,26 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
-  background: radial-gradient(1200px 800px at 10% 10%, rgba(37, 99, 235, 0.15), transparent 50%),
-              radial-gradient(1000px 700px at 90% 20%, rgba(139, 92, 246, 0.14), transparent 55%),
-              linear-gradient(180deg, #fbfbff, #f6f7ff 40%, #f7f7fb);
+  background-color: #f7f7fb;
+  background-image: url('https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.68), rgba(255,255,255,0.68));
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Remove previous noise layer */
+body::after { content: none; }
 
 .no-print { }
 .only-print { display: none; }
@@ -94,6 +110,22 @@ body.sidebar-open .mobile-sidebar { transform: translateX(0); }
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 20px;
+}
+
+.app-footer {
+  margin-top: 16px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-top: 1px solid rgba(255,255,255,0.35);
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
 }
 
 .section-title { margin: 0 0 10px; font-size: 18px; }
@@ -208,6 +240,7 @@ body.manage-on .app-main { grid-template-columns: 1fr; }
   .no-print { display: none !important; }
   .only-print { display: block !important; }
   body { background: white; }
+  body::before, body::after { display: none; }
   .app-main { grid-template-columns: 1fr; padding: 0; max-width: 100%; }
   .menu-section { display: none !important; }
   .cart-card { border: none; box-shadow: none; }
