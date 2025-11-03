@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restaurant Billing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header no-print">
+      <div class="brand">Resto Billing</div>
+      <div class="actions">
+        <button id="printBtn" class="btn btn-primary no-manage">Print Bill</button>
+        <button id="manageBtn" class="btn btn-ghost">Menu Management</button>
+      </div>
+      <button id="hamburgerBtn" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div id="sidebarOverlay" class="sidebar-overlay no-print"></div>
+    <aside id="mobileSidebar" class="mobile-sidebar no-print" aria-hidden="true">
+      <div class="mobile-sidebar-inner">
+        <div class="mobile-sidebar-header">Menu
+          <button id="closeSidebarBtn" class="mobile-sidebar-close" aria-label="Close">×</button>
+        </div>
+        <div class="mobile-sidebar-actions">
+          <button id="printBtnMobile" class="btn btn-primary no-manage">Print Bill</button>
+          <button id="manageBtnMobile" class="btn btn-ghost">Menu Management</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <section class="menu-section no-print">
+        <h2 class="section-title no-print">Menu</h2>
+        <form id="addMenuForm" class="menu-add-form manage-only">
+          <input id="itemNameInput" type="text" placeholder="Item name" required class="input" />
+          <input id="itemPriceInput" type="number" placeholder="Price" min="0" step="1" required class="input" />
+          <input id="itemImageInput" type="file" accept="image/*" class="input" />
+          <button type="submit" class="btn btn-primary">Add Menu Item</button>
+        </form>
+        <div id="menuGrid" class="menu-grid"></div>
+      </section>
+
+      <section class="cart-section">
+        <h2 class="section-title">Cart</h2>
+        <div class="cart-card">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th class="num">Price</th>
+                <th class="num">Qty</th>
+                <th class="num">Total</th>
+                <th class="no-print"></th>
+              </tr>
+            </thead>
+            <tbody id="cartTableBody"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2" class="muted">Items: <span id="itemCount">0</span></td>
+                <td class="right"><strong>Subtotal</strong></td>
+                <td class="num"><strong id="subtotal">₹0</strong></td>
+                <td class="no-print"></td>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="cart-actions no-print">
+            <button id="printBtnBottom" class="btn btn-primary">Print Bill</button>
+            <button id="clearCartBtnBottom" class="btn btn-ghost">Clear Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="printHeader" class="print-header only-print">
+        <div class="print-title">Resto Billing</div>
+        <div class="print-meta">
+          <span id="printDate"></span>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
+
