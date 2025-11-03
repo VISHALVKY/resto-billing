@@ -1,14 +1,14 @@
 (function () {
   const MENU_ITEMS = [
-    { id: 'idly', name: 'Idly', price: 10, image: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'dosa', name: 'Dosa', price: 40, image: 'https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'poori', name: 'Poori', price: 40, image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'pongal', name: 'Pongal', price: 45, image: 'https://images.pexels.com/photos/1117862/pexels-photo-1117862.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'vada', name: 'Vada', price: 10, image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'other-dosa', name: 'Other Variety Dosa', price: 60, image: 'https://images.pexels.com/photos/416471/pexels-photo-416471.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'tea', name: 'Tea', price: 10, image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
+    { id: 'idly', name: 'Idly', price: 10, image: 'https://i.pinimg.com/736x/b2/ff/2d/b2ff2db26040e2c78de4b740a6449f6d.jpg' },
+    { id: 'dosa', name: 'Dosa', price: 40, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROxgAM9ZzNMo-OCM9oILuZ57Sp2FGSRuNP1A&s' },
+    { id: 'poori', name: 'Poori', price: 40, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS787-LKLs0P2guxqQ7eBDEeqqdfkgLP8yfDg&s' },
+    { id: 'pongal', name: 'Pongal', price: 45, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR42VtQcvzbTIjsZiRjkApTcVSMC0dKFOe_Fg&s' },
+    { id: 'vada', name: 'Vada', price: 10, image: 'https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fmobile%2Fuzhunnu-vada-1722148316_d8aad9c3cde71ba01e39.webp&w=3840&q=75' },
+    { id: 'rava dosa', name: 'Rava Dosa', price: 60, image: 'https://i.pinimg.com/474x/ff/f8/b1/fff8b14c5f319bde054dfd14caf2c0dd.jpg' },
+    { id: 'tea', name: 'Tea', price: 10, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8PwI94-TtdYXhh_ubOBnhvD7QJuye_ddIWeiwQqziou6pjQgx7hCKDbSKruYnl_X5E4&usqp=CAU' },
     { id: 'coffee', name: 'Coffee', price: 15, image: 'https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' },
-    { id: 'snacks', name: 'Snacks', price: 20, image: 'https://images.pexels.com/photos/410648/pexels-photo-410648.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1' }
+    { id: 'snacks', name: 'Snacks', price: 20, image: 'https://preview.redd.it/discover-the-best-indian-snacks-a-curated-list-for-every-v0-xknk4u9q5pee1.jpg?width=1080&crop=smart&auto=webp&s=2f962b285b3b46ed2d69b67dfa8752fb88521147' }
   ];
 
   const STORAGE_KEY = 'resto_cart_v1';
